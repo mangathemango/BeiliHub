@@ -273,3 +273,7 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+function memberCardClickEffect(link) {
+    window.open(link, "_blank");
+}
