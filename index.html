@@ -1,13 +1,153 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow Solutions - Professional Web Development Team</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>TechFlow</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link btn-outline">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Building Digital Excellence</h1>
+                    <p class="hero-subtitle">We're a passionate team of developers creating innovative web solutions that drive business growth and user engagement.</p>
+                    <div class="hero-buttons">
+                        <a href="team.html" class="btn btn-primary">Meet Our Team</a>
+                        <a href="portfolio.html" class="btn btn-secondary">View Our Work</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Team collaboration">
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose TechFlow?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Rapid Development</h3>
+                        <p>Fast, efficient delivery without compromising quality. We use cutting-edge tools and methodologies.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Beautiful Design</h3>
+                        <p>Stunning, user-focused interfaces that convert visitors into customers and enhance user experience.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Performance First</h3>
+                        <p>Lightning-fast websites optimized for speed, SEO, and mobile responsiveness across all devices.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔧</div>
+                        <h3>Full-Stack Expertise</h3>
+                        <p>Complete solutions from frontend to backend, databases, and deployment infrastructure.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-preview">
+            <div class="container">
+                <h2 class="section-title">Meet Our Amazing Team</h2>
+                <p class="section-subtitle">Talented professionals dedicated to bringing your vision to life</p>
+                <div class="team-preview-grid">
+                    <div class="member-preview">
+                        <img src="member_photo/vagif.jpg" alt="Alex Chen">
+                        <h3>Vagif</h3>
+                        <p>CEO & DevOps Engineer</p>
+                    </div>
+                    <div class="member-preview">
+                        <img src="member_photo/mango.jpg" alt="Sarah Martinez">
+                        <h3>Mango</h3>
+                        <p>CTO & Backend Developer</p>
+                    </div>
+                    <div class="member-preview">
+                        <img src="member_photo/darren.jpg" alt="David Kim">
+                        <h3>Darren</h3>
+                        <p>Backend Developer</p>
+                    </div>
+                    <div class="member-preview">
+                        <img src="member_photo/aiuna.jpg" alt="Emily Johnson">
+                        <h3>Aiuna</h3>
+                        <p>Frontend Developer & UI/UX Designer</p>
+                    </div>
+                    <div class="member-preview">
+                        <img src="member_photo/darrel.jpg" alt="Emily Johnson">
+                        <h3>Darrel</h3>
+                        <p>UI/UX & Frontend Designer</p>
+                    </div>
+                    <div class="member-preview">
+                        <img src="member_photo/nada.jpg" alt="Emily Johnson">
+                        <h3>Nada</h3>
+                        <p>CIO & Documentation Specialist</p>
+                    </div>
+                </div>
+                <div class="team-cta">
+                    <a href="team.html" class="btn btn-primary">Learn More About Our Team</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechFlow Solutions</h3>
+                    <p>Creating digital experiences that matter.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <p>Email: hello@techflow.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechFlow Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
 </html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TechFlow Solutions</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>TechFlow</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="login.html" class="nav-link btn-outline">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 70px;">
+        <section class="contact-hero">
+            <div class="container">
+                <h1>Get In Touch</h1>
+                <p class="hero-subtitle">Ready to start your next project? We'd love to hear from you.</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-section">
+                        <h2>Send Us a Message</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <select id="subject" name="subject" class="form-input" required>
+                                    <option value="">Select a topic...</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="mobile-app">Mobile App Development</option>
+                                    <option value="design">UI/UX Design</option>
+                                    <option value="consulting">Consulting</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" class="form-input form-textarea" required placeholder="Tell us about your project..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary contact-submit">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-section">
+                        <h2>Contact Information</h2>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div>
+                                    <h4>Email</h4>
+                                    <p>hello@techflow.com</p>
+                                    <p>support@techflow.com</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">📞</div>
+                                <div>
+                                    <h4>Phone</h4>
+                                    <p>+1 (555) 123-4567</p>
+                                    <p>Mon-Fri, 9AM-6PM EST</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div>
+                                    <h4>Office</h4>
+                                    <p>123 Innovation Drive</p>
+                                    <p>Tech City, TC 12345</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="response-time">
+                            <h3>Response Time</h3>
+                            <p>We typically respond to all inquiries within 24 hours during business days. For urgent matters, please call us directly.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechFlow Solutions</h3>
+                    <p>Creating digital experiences that matter.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <p>Email: hello@techflow.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechFlow Solutions. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .contact-hero {
+            padding: var(--space-8) 0;
+            background: linear-gradient(135deg, var(--primary-100) 0%, var(--secondary-100) 100%);
+            text-align: center;
+        }
+
+        .contact-hero h1 {
+            font-size: 3rem;
+            color: var(--gray-900);
+            margin-bottom: var(--space-4);
+        }
+
+        .contact-content {
+            padding: var(--space-10) 0;
+            background: white;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: var(--space-8);
+        }
+
+        .contact-form-section h2 {
+            margin-bottom: var(--space-6);
+            color: var(--gray-900);
+        }
+
+        .contact-submit {
+            width: 100%;
+            padding: var(--space-3);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .contact-info-section {
+            background: var(--gray-50);
+            padding: var(--space-6);
+            border-radius: var(--radius-xl);
+            height: fit-content;
+        }
+
+        .contact-info-section h2 {
+            margin-bottom: var(--space-6);
+            color: var(--gray-900);
+        }
+
+        .contact-info {
+            margin-bottom: var(--space-6);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-3);
+            margin-bottom: var(--space-4);
+            padding-bottom: var(--space-4);
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-top: var(--space-1);
+        }
+
+        .contact-item h4 {
+            margin-bottom: var(--space-1);
+            color: var(--gray-900);
+        }
+
+        .contact-item p {
+            color: var(--gray-600);
+            margin-bottom: 0.25rem;
+        }
+
+        .response-time {
+            padding: var(--space-4);
+            background: var(--primary-50);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--primary-600);
+        }
+
+        .response-time h3 {
+            color: var(--primary-800);
+            margin-bottom: var(--space-2);
+        }
+
+        .response-time p {
+            color: var(--gray-700);
+            margin: 0;
+            line-height: var(--line-height-relaxed);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-6);
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .contact-info-section {
+                order: -1;
+            }
+        }
+    </style>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - TechFlow Solutions</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>TechFlow</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="team.html" class="nav-link">Team</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="login.html" class="nav-link btn-outline">Login</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 70px; min-height: calc(100vh - 70px); display: flex; align-items: center;">
+        <div class="container">
+            <div class="register-container">
+                <div class="register-content">
+                    <div class="register-header">
+                        <h1>Join TechFlow</h1>
+                        <p>Create your account to get started with our services</p>
+                    </div>
+
+                    <form class="register-form" id="registerForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required placeholder="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required placeholder="Doe">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" required placeholder="john@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="company" class="form-label">Company (Optional)</label>
+                            <input type="text" id="company" name="company" class="form-input" placeholder="Your Company">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" id="password" name="password" class="form-input" required placeholder="Create a password">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" required placeholder="Confirm password">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for updates and insights
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary register-btn">Create Account</button>
+                    </form>
+
+                    <div class="register-footer">
+                        <p>Already have an account? <a href="login.html" class="login-link">Sign in here</a></p>
+                    </div>
+                </div>
+
+                <div class="register-image">
+                    <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Team working together">
+                    <div class="register-overlay">
+                        <h3>Join Our Community</h3>
+                        <p>Connect with innovative businesses and access exclusive resources to grow your digital presence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <style>
+        .register-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--radius-2xl);
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+            min-height: 700px;
+        }
+
+        .register-content {
+            padding: var(--space-8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .register-header {
+            text-align: center;
+            margin-bottom: var(--space-6);
+        }
+
+        .register-header h1 {
+            font-size: 2rem;
+            color: var(--gray-900);
+            margin-bottom: var(--space-2);
+        }
+
+        .register-header p {
+            color: var(--gray-600);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .register-form {
+            width: 100%;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-3);
+        }
+
+        .register-btn {
+            width: 100%;
+            padding: var(--space-3);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: var(--space-2);
+        }
+
+        .register-footer {
+            text-align: center;
+            margin-top: var(--space-6);
+            padding-top: var(--space-4);
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .register-footer p {
+            color: var(--gray-600);
+            margin: 0;
+        }
+
+        .login-link, .terms-link {
+            color: var(--primary-600);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-fast);
+        }
+
+        .login-link:hover, .terms-link:hover {
+            color: var(--primary-700);
+            text-decoration: underline;
+        }
+
+        .register-image {
+            position: relative;
+            background: var(--primary-50);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .register-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .register-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: var(--space-6);
+        }
+
+        .register-overlay h3 {
+            font-size: 1.5rem;
+            margin-bottom: var(--space-2);
+            color: white;
+        }
+
+        .register-overlay p {
+            margin: 0;
+            line-height: var(--line-height-relaxed);
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: flex-start;
+            font-size: 0.875rem;
+            color: var(--gray-700);
+            cursor: pointer;
+            line-height: var(--line-height-relaxed);
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            margin-right: var(--space-2);
+            margin-top: 2px;
+        }
+
+        @media (max-width: 768px) {
+            .register-container {
+                grid-template-columns: 1fr;
+                margin: var(--space-4);
+            }
+
+            .register-image {
+                display: none;
+            }
+
+            .register-content {
+                padding: var(--space-6);
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+        }
+    </style>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
