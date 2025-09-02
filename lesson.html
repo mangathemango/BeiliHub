@@ -17,7 +17,7 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="course-name" id="toggleSidebar">
-                Course Name <span>❮</span>
+                Course Name <span id="arrow">❮</span>
             </div>
             <div class="video-list" id="videoList">
                 <div class="video active">Video 1</div>
@@ -31,12 +31,22 @@
         <!-- Main -->
         <main class="main">
             <div class="video-player">
-                <iframe src="https://youtu.be/coaN2VBNgYA" alt="Video Preview" width="100%" height="100%"></iframe>
+                <iframe src="https://www.bilibili.com/video/BV1UT42167xb/?spm_id_from=333.337.search-card.all.click" alt="Video Preview" width="100%" height="100%"></iframe>
             </div>
             <div class="video-title">Video Title</div>
-            <div class="video-desc">
-                Description/Information about the video
-                <span>⌄</span>
+            <div id="video-desc">
+                <div id="video-desc-title">
+                    Description/Information about the video
+                    <p id="downArrow">⌄</p>
+                </div>
+                <p id="video-desc-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Morbi sollicitudin ac arcu rhoncus ornare. 
+                    Donec eget magna pharetra, convallis sapien eget, vestibulum mi. 
+                    Aliquam tincidunt velit in sem molestie ornare. 
+                    In luctus sollicitudin imperdiet. Donec eu laoreet risus. 
+                    Vestibulum auctor varius ex venenatis hendrerit.
+                </p>
             </div>
 
             <!-- Questions -->
