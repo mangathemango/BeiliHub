@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="css/lesson.css">
+    <title>北理Hub</title>
+</head>
+
+<body>
+
+    <div component-html="navbar.html"></div>
+
+    <!-- Layout -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="course-name" id="toggleSidebar">
+                Course Name <span>❮</span>
+            </div>
+            <div class="video-list" id="videoList">
+                <div class="video active">Video 1</div>
+                <div class="video">Video 2</div>
+                <div class="video">Video 3</div>
+                <div class="video">Video 4</div>
+                <div class="video">Video 5</div>
+            </div>
+        </aside>
+
+        <!-- Main -->
+        <main class="main">
+            <div class="video-player">
+                <iframe src="https://youtu.be/coaN2VBNgYA" alt="Video Preview" width="100%" height="100%"></iframe>
+            </div>
+            <div class="video-title">Video Title</div>
+            <div class="video-desc">
+                Description/Information about the video
+                <span>⌄</span>
+            </div>
+
+            <!-- Questions -->
+            <div class="questions">
+                <h2>Questions</h2>
+
+                <div class="question-card">
+                    <img class="avatar" src="https://via.placeholder.com/35/ff6666" alt="">
+                    <div class="question-content">
+                        <div><span class="username">Username</span><span class="timestamp">x months ago</span></div>
+                        <div>Question</div>
+                        <div class="reply">Reply</div>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <img class="avatar" src="https://via.placeholder.com/35/ccff66" alt="">
+                    <div class="question-content">
+                        <div><span class="username">Username</span><span class="timestamp">x months ago</span></div>
+                        <div>Question</div>
+                        <div class="reply">Reply</div>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <img class="avatar" src="https://via.placeholder.com/35/99ccff" alt="">
+                    <div class="question-content">
+                        <div><span class="username">Username</span><span class="timestamp">x months ago</span></div>
+                        <div>Question</div>
+                        <div class="reply">Reply</div>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <img class="avatar" src="https://via.placeholder.com/35/cc99ff" alt="">
+                    <div class="question-content">
+                        <div><span class="username">Username</span><span class="timestamp">x months ago</span></div>
+                        <div>Question</div>
+                        <div class="reply">Reply</div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/lesson.js"></script>
+</body>
+
+</html>
