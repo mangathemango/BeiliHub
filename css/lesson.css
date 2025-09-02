@@ -83,6 +83,13 @@
       background: #e67e4c;
     }
 
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .flipped {
+        transform: scaleX(-1);
+    }
 
     .video-list .video {
       background: #3a3a3a;
