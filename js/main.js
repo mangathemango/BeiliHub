@@ -287,7 +287,22 @@ document.addEventListener("DOMContentLoaded", () => {
     } catch (e) {
       el.innerHTML = `<p style="color:red;">Could not load ${file}</p>`;
     }
+    
+    // Very confusing code adding the class "active" to the current page's link in the navbar. (Which highlights it with blue btw)
+    // View components/navbar.html to see how the navbar is structured
+    if (file === "navbar.html") {
+        Array.from(
+            el.querySelector(".navbar")
+            .querySelector(".nav-container")
+            .querySelector(".nav-menu")
+            .children
+        ).find(element => {
+            console.log(element.firstChild.href.split("/").pop())
+            return element.firstChild.href.split("/").pop() === window.location.pathname.split("/").pop()
+        }).firstChild.classList.add("active");
+    }
   });
+
 });
 
 
