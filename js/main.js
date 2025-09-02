@@ -272,6 +272,25 @@ style.textContent = `
         transform: rotate(-45deg) translate(7px, -6px);
     }
 `;
+
+// This block enables HTML component inclusion via the custom attribute "component-html".
+// Example: <div component-html="filename.html"></div>
+// This div element will fetch and include the content of components/filename.html
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[component-html]").forEach(async el => {
+    const file = el.getAttribute("component-html");
+    try {
+      const res = await fetch(`components/${file}`);
+      if (!res.ok) throw new Error("404 not found");
+      el.innerHTML = await res.text();
+    } catch (e) {
+      el.innerHTML = `<p style="color:red;">Could not load ${file}</p>`;
+    }
+  });
+});
+
+
 document.head.appendChild(style);
 
 function memberCardClickEffect(link) {
