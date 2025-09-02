@@ -44,21 +44,21 @@
 }
 
 .nav-link:hover {
-    color: #FFB27D;
+    color: #5EC6FF;
 }
 
 .nav-link.active {
-    color: #FFB27D;
+    color: #5EC6FF ;
 }
 
 .btn-outline {
-    border: 1px solid #FFB27D;
+    border: 3px solid #5EC6FF;
     color: white;
-    background: #BD8965;
+    background: linear-gradient(90deg, transparent 0%, transparent 100%);
 }
 
 .btn-outline:hover {
-    background-color: #FFB27D;
+    background: linear-gradient(90deg, #5EC6FF 0%, #DFFFA9 100%);
     color: black;
 }
 
