@@ -27,6 +27,16 @@
     margin: 0;
 }
 
+.nav-logo {
+    display: flex;
+}
+
+.nav-logo img {
+    display: flex;
+    height: 35px;
+    margin-right: 5px;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
