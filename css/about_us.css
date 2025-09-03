@@ -99,7 +99,7 @@
 
 .team-hero {
     padding: var(--space-8) 0;
-    background: linear-gradient(0deg, #ffcba9 0%, #FF974D 100%);
+    background: linear-gradient(0deg, #B8E6FF 0%, #5EC6FF 100%);
     text-align: center;
 }
  
@@ -210,7 +210,7 @@
 }
 
 .member-role {
-    color: #FFB27D;
+    color: #5EC6FF;
     font-weight: 500;
     margin-bottom: var(--space-3);
 }
@@ -237,12 +237,13 @@
     font-weight: 500;
 }
 
-.btn-primary {
-    background-color: #FFB27D;
-    color: black;
+.btn-primary { 
+    background: transparent;
+    border: 5px solid #5EC6FF;
+    color: white;
 }
 
 .btn-primary:hover {
-    background-color: black;
-    color: #FFB27D;
+    background: linear-gradient(90deg, #5EC6FF 0%, #DFFFA9 100%);
+    color: black;
 }
