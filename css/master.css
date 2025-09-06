@@ -299,8 +299,8 @@ p {
 }
 
 .member-preview {
-    background: white;
-    padding: var(--space-4);
+    background: #525251;
+    padding-bottom: 30px;
     border-radius: var(--radius-xl);
     text-align: center;
     box-shadow: var(--shadow-md);
@@ -313,21 +313,21 @@ p {
 }
 
 .member-preview img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
+    width: 100%;
+    height: 200px;
+    border-radius: 0.75rem;
     object-fit: cover;
     margin-bottom: var(--space-3);
-    border: 4px solid var(--primary-100);
 }
 
 .member-preview h3 {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
     margin-bottom: var(--space-1);
+    color: white;
 }
 
 .member-preview p {
-    color: var(--gray-600);
+    color: #5EC6FF;
     font-size: 0.875rem;
     margin: 0;
 }
