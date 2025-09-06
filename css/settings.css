@@ -1,0 +1,114 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px; 
+    min-height: 100vh;
+    background-color: #1E1E1E;
+    color: white;
+}
+
+#settings-title {
+    color: white;
+}
+
+#my-account-container {
+    width: 50%;
+    min-width: 600px;
+    max-width: 800px;
+}
+
+#my-account-container h2 {
+    color: white;
+}
+
+#my-account-settings {
+    background-color: #3D3D3D;
+    padding: 10px 20px;
+}
+
+#my-account-top {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    width: 100%;
+}
+
+#profile-picture {
+    justify-self: center;
+    align-self: center;
+    width: 70%;
+    aspect-ratio: 1/1;
+    background-color: rgb(173, 207, 255);
+    border-radius: 50%;
+}
+
+#account-details {
+    width: 100%;
+    display: grid;
+    gap: 3px;
+    grid-template-columns: 3fr 6fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 10px;
+    height: 90%;
+}
+
+#account-details p {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+#account-details input {
+    height: 30px;
+    align-self: center;
+    border-radius: 5px;
+    background-color: #313131;
+    border: none;
+}
+
+#account-details button {
+    width: 30px;
+    aspect-ratio: 1/1;
+    justify-self: center;
+    align-self: center;
+    background-image: url(/assets/images/icons/edit_button.png);
+    background-size: cover;
+    background-color: transparent;    
+    border: none;
+}
+
+#my-account-bottom {
+    display: flex;
+    flex-flow: row-reverse;
+    gap: 5px;
+    margin-top: -15px;
+}
+
+#my-account-bottom button {
+    padding: 5px 20px;
+    background: transparent;
+    border-radius: 5px;
+    transition: 0.2s ease-in-out;
+}
+
+#delete-account-button {
+    border: 5px solid #FF8C8C;
+    color: #FF8C8C;
+}
+#delete-account-button:hover {
+    background-color: #FF8C8C;
+    color: black;
+    transform: translateY(-3px);
+}
+
+#log-out-button {
+    border: 5px solid white;
+    color: white;
+}
+
+#log-out-button:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-3px);
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - TechFlow Solutions</title>
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div component-html="navbar.html"></div>
+
+    <main>
+        <h1 id="settings-title">Settings</h1>
+        <div id="my-account-container">
+            <h2>My account</h2>
+            <div id="my-account-settings">
+                <div id="my-account-top">
+                    <div id="profile-picture"></div>
+                    <div id="account-details">
+                        <p>Username</p>
+                        <input type="text" disabled id="username-input">
+                        <button></button>
+                        <p>Email Address</p>
+                        <input type="text" disabled id="email-input">
+                        <button></button>
+                        <p>Password</p>
+                        <input type="password" disabled>
+                        <button></button>
+                    </div>
+                </div>
+                <div id="my-account-bottom">
+                    <button id="delete-account-button">Delete Account</button>
+                    <button id="log-out-button">Log Out</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
