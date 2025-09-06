@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="/css/lesson.css">
+    <title>北理Hub</title>
+</head>
+
+<body>
+
+    <div component-html="navbar.html"></div>
+
+    <!-- Layout -->
+    <div class="container">
+        <div component-html="lesson_sidebar.html"></div>
+
+        <!-- Main -->
+        <main class="main">
+            <div class="video-player">
+                <iframe src="" alt="Video Preview" width="100%" height="100%"></iframe>
+            </div>
+            <div class="video-title">Video Title</div>
+            <div id="video-desc">
+                <div id="video-desc-title">
+                    Description/Information about the video
+                    <p id="downArrow">⌄</p>
+                </div>
+                <p id="video-desc-body">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi sollicitudin ac arcu rhoncus ornare.
+                    Donec eget magna pharetra, convallis sapien eget, vestibulum mi.
+                    Aliquam tincidunt velit in sem molestie ornare.
+                    In luctus sollicitudin imperdiet. Donec eu laoreet risus.
+                    Vestibulum auctor varius ex venenatis hendrerit.
+                </p>
+            </div>
+
+            <!-- Questions -->
+            <div class="questions">
+                <h2>Questions</h2>
+
+                <div class="question-card">
+                    <img class="avatar" src="https://via.placeholder.com/35/ff6666" alt="">
+                    <div class="question-content">
+                        <div><span class="username">Username</span><span class="timestamp">x months ago</span></div>
+                        <div>Question</div>
+                        <div class="reply">Reply</div>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <img class="avatar" src="https://via.placeholder.com/35/ccff66" alt="">
+                    <div class="question-content">
+                        <div><span class="username">Username</span><span class="timestamp">x months ago</span></div>
+                        <div>Question</div>
+                        <div class="reply">Reply</div>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <img class="avatar" src="https://via.placeholder.com/35/99ccff" alt="">
+                    <div class="question-content">
+                        <div><span class="username">Username</span><span class="timestamp">x months ago</span></div>
+                        <div>Question</div>
+                        <div class="reply">Reply</div>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <img class="avatar" src="https://via.placeholder.com/35/cc99ff" alt="">
+                    <div class="question-content">
+                        <div><span class="username">Username</span><span class="timestamp">x months ago</span></div>
+                        <div>Question</div>
+                        <div class="reply">Reply</div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <script src="/js/main.js"></script>
+    <script src="/js/lesson.js"></script>
+</body>
+
+</html>

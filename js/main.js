@@ -1,12 +1,12 @@
 // Main JavaScript File - TechFlow Solutions
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
     if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
+        hamburger.addEventListener('click', function () {
             navMenu.classList.toggle('active');
             hamburger.classList.toggle('active');
         });
@@ -40,13 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (filterButtons.length > 0 && portfolioItems.length > 0) {
         filterButtons.forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function () {
                 const filter = this.getAttribute('data-filter');
-                
+
                 // Update active button
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
-                
+
                 // Filter portfolio items
                 portfolioItems.forEach(item => {
                     if (filter === 'all' || item.getAttribute('data-category') === filter) {
@@ -62,16 +62,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Form Validation and Submission
     const forms = ['#loginForm', '#registerForm', '#contactForm'];
-    
+
     forms.forEach(formSelector => {
         const form = document.querySelector(formSelector);
         if (form) {
-            form.addEventListener('submit', function(e) {
+            form.addEventListener('submit', function (e) {
                 e.preventDefault();
-                
+
                 const formData = new FormData(this);
                 const data = Object.fromEntries(formData);
-                
+
                 // Basic validation
                 if (formSelector === '#registerForm') {
                     if (data.password !== data.confirmPassword) {
@@ -83,10 +83,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         return;
                     }
                 }
-                
+
                 // Simulate form submission
                 showLoadingState(this);
-                
+
                 setTimeout(() => {
                     hideLoadingState(this);
                     if (formSelector === '#loginForm') {
@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver(function(entries) {
+    const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in');
@@ -126,10 +126,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Navbar scroll effect
     let lastScrollTop = 0;
     const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', function() {
+
+    window.addEventListener('scroll', function () {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
+
         if (scrollTop > lastScrollTop && scrollTop > 100) {
             // Scrolling down
             navbar.style.transform = 'translateY(-100%)';
@@ -137,14 +137,14 @@ document.addEventListener('DOMContentLoaded', function() {
             // Scrolling up
             navbar.style.transform = 'translateY(0)';
         }
-        
+
         // Add background when scrolled
         if (scrollTop > 50) {
             navbar.classList.add('scrolled');
         } else {
             navbar.classList.remove('scrolled');
         }
-        
+
         lastScrollTop = scrollTop;
     });
 });
@@ -154,7 +154,7 @@ function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.textContent = message;
-    
+
     // Add styles
     notification.style.cssText = `
         position: fixed;
@@ -171,9 +171,9 @@ function showNotification(message, type = 'info') {
         max-width: 350px;
         box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     `;
-    
+
     // Set background color based on type
-    switch(type) {
+    switch (type) {
         case 'success':
             notification.style.backgroundColor = '#10b981';
             break;
@@ -186,15 +186,15 @@ function showNotification(message, type = 'info') {
         default:
             notification.style.backgroundColor = '#3b82f6';
     }
-    
+
     document.body.appendChild(notification);
-    
+
     // Animate in
     setTimeout(() => {
         notification.style.opacity = '1';
         notification.style.transform = 'translateX(0)';
     }, 10);
-    
+
     // Remove after 4 seconds
     setTimeout(() => {
         notification.style.opacity = '0';
@@ -221,7 +221,7 @@ function hideLoadingState(form) {
     if (submitBtn) {
         submitBtn.disabled = false;
         submitBtn.style.opacity = '1';
-        
+
         // Restore original text based on form type
         if (form.id === 'loginForm') {
             submitBtn.textContent = 'Sign In';
@@ -278,30 +278,49 @@ style.textContent = `
 // This div element will fetch and include the content of components/filename.html
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll("[component-html]").forEach(async el => {
-    const file = el.getAttribute("component-html");
-    try {
-      const res = await fetch(`components/${file}`);
-      if (!res.ok) throw new Error("404 not found");
-      el.innerHTML = await res.text();
-    } catch (e) {
-      el.innerHTML = `<p style="color:red;">Could not load ${file}</p>`;
-    }
-    
-    // Very confusing code adding the class "active" to the current page's link in the navbar. (Which highlights it with blue btw)
-    // View components/navbar.html to see how the navbar is structured
-    if (file === "navbar.html") {
-        Array.from(
-            el.querySelector(".navbar")
-            .querySelector(".nav-container")
-            .querySelector(".nav-menu")
-            .children
-        ).find(element => {
-            console.log(element.firstChild.href.split("/").pop())
-            return element.firstChild.href.split("/").pop() === window.location.pathname.split("/").pop()
-        }).firstChild.classList.add("active");
-    }
-  });
+    document.querySelectorAll("[component-html]").forEach(async el => {
+        const file = el.getAttribute("component-html");
+        try {
+            const res = await fetch(`/components/${file}`);
+            if (!res.ok) throw new Error("404 not found");
+            el.innerHTML = await res.text();
+        } catch (e) {
+            el.innerHTML = `<p style="color:red;">Could not load ${file}</p>`;
+        }
+
+        // Very confusing code adding the class "active" to the current page's link in the navbar. (Which highlights it with blue btw)
+        // View components/navbar.html to see how the navbar is structured
+        if (file === "navbar.html") {
+            let nav = Array.from(
+                el.querySelector(".navbar")
+                    .querySelector(".nav-container")
+                    .querySelector(".nav-menu")
+                    .children
+            ).find(element => {
+                return element.firstChild.href.split("/").pop() === window.location.pathname.split("/").pop()
+            }).firstChild.classList.add("active");
+        }
+
+        if (file === "lesson_sidebar.html") {
+            const uri = window.location.pathname.split("/");
+            const currentLesson = uri.pop();
+            const course = uri.pop();
+            fetch("/courses.json")
+                .then(res => res.json())
+                .then(files => {
+                    let count = 1;
+                    files[course].forEach(lesson => {
+                        document.getElementById("videoList").innerHTML +=  
+                            `<a href="${lesson}.html" style="text-decoration: none; color: inherit;">
+                                <div class="video${currentLesson === lesson + ".html" ? " active": ""}" >Lesson ${count}</div>
+                            </a>`
+                        count += 1;
+                    });
+                    
+                });
+            
+        }
+    });
 
 });
 

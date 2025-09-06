@@ -1,0 +1,24 @@
+<aside class="sidebar">
+    <div class="course-name" id="toggleSidebar">
+        Course Name <span id="arrow">❮</span>
+    </div>
+    <div class="video-list" id="videoList">
+
+    </div>
+</aside>
+<script>
+    const sideBar = document.getElementById('toggleSidebar');
+    const videoList = document.getElementById('videoList');
+    const arrow = document.getElementById('arrow');
+
+    /*const arrow = toggle.querySelector('.arrow');*/
+
+    sideBar.addEventListener('click', () => {
+        document.querySelectorAll(".video").forEach(element => {
+            if (!element.classList.contains("active")) {
+                element.classList.toggle('hidden')
+            }
+        })
+        arrow.classList.toggle('flipped')
+    })
+</script>
